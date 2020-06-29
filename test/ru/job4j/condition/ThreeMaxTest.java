@@ -47,4 +47,10 @@ public class ThreeMaxTest {
         int rsl = ThreeMax.max(1, 100, 100);
         assertThat(rsl, is(100));
     }
+
+    @Test
+    public void thirdEqSecond() {
+        int rsl = ThreeMax.max(1, 2, 2);
+        assertThat(rsl, is(2));
+    }
 }
