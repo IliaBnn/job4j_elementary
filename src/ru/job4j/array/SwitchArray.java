@@ -23,4 +23,11 @@ public class SwitchArray {
             System.out.println(rsl[index]);
         }
     }
+
+    public static String[] swapString(String[] array, int source, int dest) {
+        String temp = array[source];
+        array[source] = array[dest];
+        array[dest] = temp;
+        return array;
+    }
 }
