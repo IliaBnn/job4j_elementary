@@ -1,6 +1,6 @@
 package ru.job4j.calculate;
 
-public class X2 {
+public class QuadrEquation {
     public static int calc(int a, int b, int c, int x) {
         return a * x * x + b * x + c;
     }
@@ -10,7 +10,7 @@ public class X2 {
         int b = 0;
         int c = 0;
         int x = 1;
-        int rsl = X2.calc(a, b, c, x);
+        int rsl = QuadrEquation.calc(a, b, c, x);
         System.out.println(rsl);
     }
 }
