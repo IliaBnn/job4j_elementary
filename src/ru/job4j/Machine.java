@@ -9,16 +9,21 @@ public class Machine {
     public int[] change(int money, int price) {
         int[] rsl = new int[100];
         int size = 0;
-        int j = 0;
-        while (money - price > 0) {
-            if (money - COINS[j] >= price) {
-                rsl[size] = COINS[j];
-                money -= COINS[j];
+        for (int i = 0; i < COINS.length; i++) {
+            while (money - COINS[i] >= price) {
+                rsl[size] = COINS[i];
+                money -= COINS[i];
                 size++;
-            } else {
-                j++;
             }
         }
         return Arrays.copyOf(rsl, size);
+    }
+
+    public static void main(String[] args) {
+        Machine m = new Machine();
+        int[] array = m.change(50, 35);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
     }
 }
