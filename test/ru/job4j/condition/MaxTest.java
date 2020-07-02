@@ -30,4 +30,15 @@ public class MaxTest {
         int result = Max.max(5, 5);
         assertThat(result, is(5));
     }
+
+    @Test
+    public void maxThird() {
+        int rsl = Max.max(1, 2, 3);
+        assertThat(rsl, is(3));
+    }
+
+    @Test
+    public void maxFourth() {
+        int rsl = Max.max(1, 4, 2, 0);
+    }
 }
